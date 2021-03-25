@@ -33,3 +33,23 @@ CREATE TABLE `klob_info` (
     REFERENCES `file_attachments` (`id`),
   CONSTRAINT `klob_category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+INSERT INTO `category`
+(code, name, updated_at,created_at)
+VALUES('company', 'Company', NOW(), NOW()),
+('community', 'Community', NOW(), NOW()),
+('education', 'Education', NOW(), NOW());
+
+
+INSERT INTO klob_info 
+(category_id , name, description, updated_at,created_at)
+VALUES(1, 'Company A', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', NOW(), NOW()),
+(1, 'Company B', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', NOW(), NOW()),
+(1, 'Company C', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', NOW(), NOW()),
+(1, 'Company D', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', NOW(), NOW()),
+(1, 'Company E', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', NOW(), NOW()),
+(1, 'Company F', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', NOW(), NOW()),
+(1, 'Company G', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', NOW(), NOW()),
+(1, 'Company H', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', NOW(), NOW()),
+(1, 'Company I', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', NOW(), NOW());
